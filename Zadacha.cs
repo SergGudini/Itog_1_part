@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-string[] GetArray(int size)
+﻿string[] GetArray(int size) // метод для заполнения массива string
 {
     string[] array = new string[size];
     for(int i = 0; i < array.Length; i++)
@@ -11,13 +9,13 @@ string[] GetArray(int size)
     return array;
 }
 
-string[] ResultArray(string[] array)
+string[] ResultArray(string[] array) // метод который заполняет массив элементами размером <=3
 {
     int size = 0;
 
      for(int i = 0; i < array.Length; i++)
         {
-            if(array[i].Length <= 3) size++;
+            if(array[i].Length <= 3) size++; // определение количества элементов размером <=3
         }      
 
     string[] mass = new string[size];
@@ -27,19 +25,15 @@ string[] ResultArray(string[] array)
     {
         if(array[i].Length <= 3)
         {
-            mass[j] = array[i];
+            mass[j] = array[i]; // заполнение массива элементами размером <=3
             j++; 
         }      
     }
-    /*string[] mass = new string[array.Length];
-    for(int i = 0; i < array.Length; i++)
-        {
-            if(array[i].Length <= 3) mass[i] = array[i];
-        } */
+    
     return mass;
 }
 
-void PrintArray(string[] array)
+void PrintArray(string[] array) // метод по выводу массива в терминал
 {
     for(int i = 0; i < array.GetLength(0); i++)
     {
